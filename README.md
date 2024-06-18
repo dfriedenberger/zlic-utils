@@ -19,14 +19,23 @@ python -m pytest tests/
 
 ## Usage
 
-### create Server
+### create Server with tun access
 ```
+from fastapi import Depends
+
 from zlicutils.server import Server
+from zlicutils.tan import TanManager
 
 server = Server(host='0.0.0.0', port=8888)
-server.router.add_api_route("/api/{id}", self._audio, methods=["GET"])
 
-self.server.start()
+tan_manager = TanManager()
+
+server.router.add_api_route("/api/{id}", _api methods=["GET"])
+
+server.router.add_api_route("/tan", tan_manager.tans_as_html, methods=["GET"])
+server.router.add_api_route("/api/verified/{source_id}", self._api_verified_, methods=["GET"], dependencies=[Depends(tan_manager.verify_tan)])
+
+server.start()
 ```
 
 ## Contributing

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-06-18
+### Added
+- tan modul
+
 ## [1.0.0] - 2024-06-18
 ### Added
 - first draw 
