@@ -4,7 +4,7 @@ from zlicutils import __version__
 setup(name='zlicutils',
       version=__version__,
       description='A library for shared classes and functionalities in the ZLiC project.',
-      url='https://github.com/dfriedenberger/zlic-tools.git',
+      url='https://github.com/dfriedenberger/zlic-utils.git',
       long_description=open('README.md', encoding="UTF-8").read(),
       long_description_content_type='text/markdown',
       author='Dirk Friedenberger',
